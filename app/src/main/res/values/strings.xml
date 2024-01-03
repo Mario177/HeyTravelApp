@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HeyTravel</string>
+    <string name="title" translatable="false">嘿~這週要去哪?</string>
+</resources>

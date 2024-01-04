@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HeyTravel</string>
     <string name="title" translatable="false">Hey~Where this weekend go?</string>
+    <string name="apikey">AIzaSyAgdnjtdCTrT8pM8bdp1iHVFhbJvfDKx5A</string>
 </resources>

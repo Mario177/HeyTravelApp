@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val button2 = findViewById<Button>(R.id.btn_newplace)
         button2.setOnClickListener {
-            val intent = Intent(this, MapsFragment::class.java)
-            startActivity(intent)
+            replaceFragment(MapsFragment())
         }
 
         val button3 = findViewById<Button>(R.id.btn_selectplace)
@@ -27,5 +28,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SelectPlace::class.java)
             startActivity(intent)
         }
+    }
+    private fun replaceFragment(fragment: Fragment){
+        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragmentContainerView,fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }

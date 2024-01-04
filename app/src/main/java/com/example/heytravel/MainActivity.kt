@@ -15,5 +15,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LanguageActivity::class.java)
             startActivity(intent)
         }
+
+        val button2 = findViewById<Button>(R.id.btn_newplace)
+        button2.setOnClickListener {
+            val intent = Intent(this, MapsFragment::class.java)
+            startActivity(intent)
+        }
     }
 }
